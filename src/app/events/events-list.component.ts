@@ -15,11 +15,12 @@ template: `
 })
 
 export class EventsListComponent implements OnInit{
-  events: any[];
+  events: any;
+
   constructor(private eventService: EventService) {
   }
 
   ngOnInit() {
-    this.events = this.eventService.getEvents()
+    this.eventService.getEvents().subscribe(events => { this.events=events})
   }
 }
