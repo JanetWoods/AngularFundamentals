@@ -8,6 +8,7 @@ import { EventService } from './events/shared/event.service'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router'
+import { CreateEventComponent } from './events/create-event.component'
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router'
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreateEventComponent
   ],
   providers: [EventService],
   bootstrap: [EventsAppComponent]
