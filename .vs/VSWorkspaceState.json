@@ -3,10 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\common",
     "\\src\\app\\events",
+    "\\src\\app\\events\\event-details",
+    "\\src\\app\\events\\shared",
+    "\\src\\app\\user",
     "\\src\\assets",
-    "\\src\\environments"
+    "\\src\\assets\\images"
   ],
-  "SelectedNode": "\\src\\app\\events\\event-thumbnail.component.ts",
+  "SelectedNode": "\\src\\app\\user\\profile.component.ts",
   "PreviewInSolutionExplorer": false
 }
