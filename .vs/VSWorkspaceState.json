@@ -7,10 +7,10 @@
     "\\src\\app\\events",
     "\\src\\app\\events\\event-details",
     "\\src\\app\\events\\shared",
+    "\\src\\app\\nav",
     "\\src\\app\\user",
-    "\\src\\assets",
-    "\\src\\assets\\images"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\user\\profile.component.ts",
+  "SelectedNode": "\\src\\app\\events-app.component.ts",
   "PreviewInSolutionExplorer": false
 }
