@@ -5,6 +5,8 @@ import { NavBarComponent } from './nav/navbar.component'
 import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router'
 import { Error404Component } from './errors/404.component'
+import { Routes } from '@angular/router'
+
 
 import {
   EventsListComponent,
