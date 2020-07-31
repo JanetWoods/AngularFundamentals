@@ -1,28 +1,51 @@
-import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup } from '@angular/forms'
+import { Component, OnInit, Input } from '@angular/core'
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { AuthService } from './auth.service'
 import {Router } from '@angular/router'
 
 @Component({
-  templateUrl: './profile-component.html',
+  templateUrl: './profile.component.html',
+  styles: [`
+   em { float: right; color:#E05C65; padding- left: 10px;}
+  .error input{ background-color:#E3C3C5;}
+  .error ::-webkit-input - Placeholder { color: #999; }
+  .error ::-moz-placeholder{ color: #999; }
+  .error :-moz-placeholder{color: #999;}
+  .error :ms-input-placeholder{color: #999;}
+`]
 })
 export class ProfileComponent implements OnInit {
   profileForm: FormGroup
+  private firstName: FormControl
+  private lastName: FormControl
 
   constructor(private router:Router, private authService: AuthService) { }
 
   ngOnInit() {
-    let firstName = new FormControl(this.authService.currentUser.firstName)
-    let lastName = new FormControl(this.authService.currentUser.lastName)
+    this.firstName = new FormControl
+      (this.authService.currentUser.firstName, Validators.required)
+    this.lastName = new FormControl
+      (this.authService.currentUser.lastName, Validators.required)
+
     this.profileForm = new FormGroup({
-      firstName: firstName,
-      lastName: lastName
+      firstName: this.firstName,
+      lastName: this.lastName
     })
   }
 
   saveProfile(formValues) {
+    if (this.profileForm.valid) {
     this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
     this.router.navigate(['events'])
+    }
+  }
+  validateFirstName() {
+    return this.firstName.valid || this.firstName.untouched
+    
+    this.profileForm.controls.firstName.invalid && this.profileForm.controls.firstName.touched
+  }
+  validateLastName() {
+      return this.lastName.valid || this.lastName.untouched
   }
   cancel() {
     this.router.navigate(['events'])
