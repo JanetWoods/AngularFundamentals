@@ -5,6 +5,9 @@ import { NavBarComponent } from './nav/navbar.component'
 import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router'
 import { Error404Component } from './errors/404.component'
+import { Routes } from '@angular/router'
+import { AuthService } from './user/auth.service'
+
 
 import {
   EventsListComponent,
@@ -34,6 +37,7 @@ import {
     EventService,
     EventRouteActivator,
     EventListResolver,
+    AuthService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
