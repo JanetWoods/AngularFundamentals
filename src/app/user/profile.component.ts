@@ -35,15 +35,13 @@ export class ProfileComponent implements OnInit {
 
   saveProfile(formValues) {
     if (this.profileForm.valid) {
-    this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
-    this.router.navigate(['events'])
+      this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
+      this.router.navigate(['events'])
     }
   }
   validateFirstName() {
     return this.firstName.valid || this.firstName.untouched
-    
-    this.profileForm.controls.firstName.invalid && this.profileForm.controls.firstName.touched
-  }
+   }
   validateLastName() {
       return this.lastName.valid || this.lastName.untouched
   }
