@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router'
 import { Error404Component } from './errors/404.component'
 import { Routes } from '@angular/router'
 import { AuthService } from './user/auth.service'
-import { FormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import {
   EventsListComponent,
   EventDetailsComponent,
@@ -22,7 +22,8 @@ import {
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     EventsAppComponent,
