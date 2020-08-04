@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router'
 import { Error404Component } from './errors/404.component'
 import { Routes } from '@angular/router'
 import { AuthService } from './user/auth.service'
-
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 import {
   EventsListComponent,
