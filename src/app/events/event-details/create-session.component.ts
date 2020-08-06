@@ -8,7 +8,7 @@ import {ISession} from '../shared/index'
 })
 export class CreateSessionComponent implements OnInit{
 
-    newSessionForm: FormGroup
+  newSessionForm: FormGroup
   name: FormControl
   presenter: FormControl
   duration: FormControl
@@ -40,6 +40,6 @@ export class CreateSessionComponent implements OnInit{
       abstract: formValues.abstract,
       voters:[]
     }
-    console.log(session)
+    console.log(formValues)
   }
 }
