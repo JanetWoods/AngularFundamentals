@@ -1,6 +1,7 @@
 import {FormControl} from '@angular/forms'
 
    // 'restrictedWords' is a function that returns a function and that function is a validator function.  The reason for that is so that we can access the words from the inner function.  We are going to use those words in the error message.
+
   export function restrictedWords(words) {
   return (control: FormControl): { [key: string]: any } => {
     //checking \/ to see if words are passed in (of course they are)\/
