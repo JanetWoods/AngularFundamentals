@@ -17,9 +17,12 @@ import {
   EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
-  SessionListComponent,  DurationPipe
+  SessionListComponent,
+  DurationPipe
 } from './events/index'
-import {CollapsibleWellComponent} from './common/collapsible-well.component'
+import { JQ_TOKEN, CollapsibleWellComponent } from './common/index'
+
+let jQuery = window['$'];
 
 @NgModule({
   imports: [
