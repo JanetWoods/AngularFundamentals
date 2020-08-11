@@ -20,7 +20,7 @@ import {
   SessionListComponent,
   DurationPipe
 } from './events/index'
-import { JQ_TOKEN, CollapsibleWellComponent } from './common/index'
+import { JQ_TOKEN, CollapsibleWellComponent, SimpleModalComponent} from './common/index'
 
 let jQuery = window['$'];
 
@@ -42,6 +42,7 @@ let jQuery = window['$'];
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    SimpleModalComponent,
     DurationPipe
   ],
   providers: [
@@ -52,7 +53,8 @@ let jQuery = window['$'];
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
-    }
+    },
+    { provide: JQ_TOKEN, useValue: jQuery}
   ],
   
   bootstrap: [EventsAppComponent]
