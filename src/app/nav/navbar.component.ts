@@ -12,12 +12,13 @@ import {EventService} from '../events/index'
     @media (max-width: 1200px) 
     li > a.active{color: #F97924;}
 `]
-  })
+})
 export class NavBarComponent {
   searchTerm: string = "";
   foundSessions: ISession[];
 
-  constructor(private auth: AuthService, private eventService: EventService) { }
+  constructor(private auth: AuthService, private eventService: EventService) {
+}
 
   searchSessions(searchTerm) {
     this.eventService.searchSessions(searchTerm).subscribe
