@@ -24,7 +24,7 @@ export class NavBarComponent {
       (sessions => {
       this.foundSessions = sessions;
         console.log(this.foundSessions);
-        return this.foundSessions;
+       // return this.foundSessions;
     })
   }
 
