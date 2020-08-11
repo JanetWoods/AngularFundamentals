@@ -20,7 +20,12 @@ import {
   SessionListComponent,
   DurationPipe
 } from './events/index'
-import { JQ_TOKEN, CollapsibleWellComponent, SimpleModalComponent} from './common/index'
+import {
+  JQ_TOKEN,
+  CollapsibleWellComponent,
+  SimpleModalComponent,
+  ModalTriggerDirective
+} from './common/index'
 
 let jQuery = window['$'];
 
@@ -43,7 +48,8 @@ let jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
-    DurationPipe
+    DurationPipe,
+    ModalTriggerDirective
   ],
   providers: [
     EventService,
