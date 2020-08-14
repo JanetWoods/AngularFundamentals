@@ -56,14 +56,15 @@ let jQuery = window['$'];
   ],
   providers: [
     EventService,
+    { provide: JQ_TOKEN, useValue: jQuery},
     EventRouteActivator,
     EventListResolver,
+    VoterService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
     },
-    { provide: JQ_TOKEN, useValue: jQuery},
     VoterService
   ],
   
