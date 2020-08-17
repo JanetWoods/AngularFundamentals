@@ -15,14 +15,13 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
-  EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
   UpvoteComponent,
   VoterService,
   LocationValidator,
-  DurationPipe
+  DurationPipe,  EventResolver
 } from './events/index'
 import {
   JQ_TOKEN,
@@ -60,8 +59,8 @@ let jQuery = window['$'];
   ],
   providers: [
     EventService,
-    { provide: JQ_TOKEN, useValue: jQuery},
-    EventRouteActivator,
+    { provide: JQ_TOKEN, useValue: jQuery },
+    EventResolver,
     EventListResolver,
     VoterService,
     AuthService,
