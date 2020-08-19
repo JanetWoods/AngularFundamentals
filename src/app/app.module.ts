@@ -21,7 +21,8 @@ import {
   UpvoteComponent,
   VoterService,
   LocationValidator,
-  DurationPipe,  EventResolver
+  DurationPipe,
+  EventResolver
 } from './events/index'
 import {
   JQ_TOKEN,
