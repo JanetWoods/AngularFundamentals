@@ -12,9 +12,15 @@ export class EventService {
 
   getEvents():Observable<IEvent[]> {
     return this.http.get<IEvent[]>('/api/events')
-    .pipe(catchError(this.handleError<IEvent[]>('getEvents',[])))
+    //.pipe(catchError(this.handleError<IEvent[]>('getEvents',[])))
   }
 
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    }
+  }
     getEvent(id: number):Observable<IEvent> {
       return this.http.get<IEvent>('/api/events/' + id)
       .pipe(catchError(this.handleError<IEvent>('getEvent')))
@@ -35,13 +41,9 @@ export class EventService {
       .pipe(catchError(this.handleError<ISession[]>('searchSessions')))
 
   }
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      return of(result as T);
-    }
+  
   }
-}
+
     const EVENTS:IEvent[] = [
       {
         id: 1,
