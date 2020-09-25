@@ -3,13 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\events",
-    "\\src\\app\\events\\event-details",
-    "\\src\\app\\events\\shared",
-    "\\src\\app\\nav",
-    "\\src\\app\\user",
-    "\\src\\assets",
-    "\\src\\assets\\images"
+    "\\src\\app\\events"
   ],
+  "SelectedNode": "\\src\\app\\events\\create-event.component.html",
   "PreviewInSolutionExplorer": false
 }

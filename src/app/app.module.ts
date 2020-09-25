@@ -53,10 +53,10 @@ let jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
+    UpvoteComponent,
     ModalTriggerDirective,
     LocationValidator,
     DurationPipe,
-    UpvoteComponent,
   ],
   providers: [
     EventService,
