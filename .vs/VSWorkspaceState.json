@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\events"
+    "\\src\\app\\events",
+    "\\src\\app\\events\\event-details",
+    "\\src\\app\\events\\shared"
   ],
-  "SelectedNode": "\\src\\app\\events\\create-event.component.html",
+  "SelectedNode": "\\src\\app\\events\\event-list-resolver.service.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -25,7 +25,7 @@ export class EventDetailsComponent implements OnInit {
         this.event = event;
         this.addMode = false;
       })
-      })
+    })
   }
   addSession() {
     this.addMode = true
