@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 import { EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './nav/navbar.component'
 import { appRoutes } from './routes'
@@ -14,13 +15,14 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
-  EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
   UpvoteComponent,
   VoterService,
-  DurationPipe
+  LocationValidator,
+  DurationPipe,
+  EventResolver
 } from './events/index'
 import {
   JQ_TOKEN,
@@ -36,7 +38,8 @@ let jQuery = window['$'];
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   declarations: [
     EventsAppComponent,
@@ -50,20 +53,22 @@ let jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
-    DurationPipe,
     UpvoteComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    LocationValidator,
+    DurationPipe,
   ],
   providers: [
     EventService,
-    EventRouteActivator,
+    { provide: JQ_TOKEN, useValue: jQuery },
+    EventResolver,
     EventListResolver,
+    VoterService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
     },
-    { provide: JQ_TOKEN, useValue: jQuery},
     VoterService
   ],
   

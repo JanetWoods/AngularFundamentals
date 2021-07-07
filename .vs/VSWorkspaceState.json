@@ -3,14 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\common",
     "\\src\\app\\events",
-    "\\src\\app\\events\\shared",
-    "\\src\\app\\nav",
-    "\\src\\app\\user",
-    "\\src\\assets",
-    "\\src\\assets\\images"
+    "\\src\\app\\events\\event-details",
+    "\\src\\app\\events\\shared"
   ],
-  "SelectedNode": "\\src\\app\\events\\event-details\\voter-service.ts",
+  "SelectedNode": "\\src\\app\\events\\event-list-resolver.service.ts",
   "PreviewInSolutionExplorer": false
 }
