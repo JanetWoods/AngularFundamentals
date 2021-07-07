@@ -12,21 +12,22 @@ import { EventService} from './shared/index'
   .error :-moz-placeholder{color: #999;}
   .error :ms-input-placeholder{color: #999;}
 `]
- 
+
 })
 export class CreateEventComponent {
   newEvent
-  isDirty:boolean=true
+  isDirty: boolean = true
   constructor(private router: Router,
     private EventService: EventService) { }
-  
+
 
   saveEvent(formValues) {
-    this.EventService.saveEvent(formValues)
-    this.isDirty = false
-    this.router.navigate(['/events'])
-    console.log(formValues)
-  }
+    this.EventService.saveEvent(formValues).subscribe(() => {
+      this.isDirty = false
+      this.router.navigate(['/events'])
+      console.log(formValues)
+    });
+}
   cancel() {
     this.router.navigate(['/events'])
   }
